@@ -41,10 +41,16 @@ $post = $statement->fetch();
                 </ul>
               </div>
            </div>
+            <form action="create-comment.php" id="usrform">
+                Name: <input type="text" name="usrname" required>
+                <br>
+                <br>
+                <textarea name="comment" form="usrform">Text here...</textarea>
+                <input type="submit">
+            </form>
        </div>
    </div>
 </main>
-
 
 <?php include_once "partials/footer.php"?>
 

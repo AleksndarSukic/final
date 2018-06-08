@@ -2,19 +2,15 @@
 
 <?php include_once "connection.php"?>
   
-    <?php
+<?php
 
-    
-    
 $sql = "SELECT Id, Title, Body, Author, Created_at FROM blogeri ORDER BY Created_at";
     $statement = $connection->prepare($sql);
     $statement->execute();
     $statement->setFetchMode(PDO::FETCH_ASSOC);
     $posts = $statement->fetchAll();
 
-
 ?>
-
 
 <main role="main" class="container">
     <div class="row">
